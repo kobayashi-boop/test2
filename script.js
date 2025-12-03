@@ -132,59 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
-  // Custom Cursor
+  // Custom Cursor - DISABLED
   // ============================================
   class Cursor {
-    constructor() {
-      this.cursor = document.querySelector('.cursor');
-      this.dot = document.querySelector('.cursor__dot');
-      this.ring = document.querySelector('.cursor__ring');
-      this.pos = { x: 0, y: 0 };
-      this.mouse = { x: 0, y: 0 };
-      this.speed = 0.15;
-    }
-
     init() {
-      if (!this.cursor || window.innerWidth < 1024) return;
-
-      document.addEventListener('mousemove', (e) => {
-        this.mouse.x = e.clientX;
-        this.mouse.y = e.clientY;
-      });
-
-      this.render();
-      this.setupHoverEffects();
-    }
-
-    render() {
-      this.pos.x += (this.mouse.x - this.pos.x) * this.speed;
-      this.pos.y += (this.mouse.y - this.pos.y) * this.speed;
-
-      if (this.dot) {
-        this.dot.style.transform = `translate(${this.mouse.x - 4}px, ${this.mouse.y - 4}px)`;
-      }
-      if (this.ring) {
-        this.ring.style.transform = `translate(${this.pos.x - 24}px, ${this.pos.y - 24}px)`;
-      }
-
-      requestAnimationFrame(() => this.render());
-    }
-
-    setupHoverEffects() {
-      const hoverElements = document.querySelectorAll('a, button, [data-cursor]');
-      
-      hoverElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-          this.cursor.classList.add('cursor--hover');
-          if (el.dataset.cursor === 'text') {
-            this.cursor.classList.add('cursor--text');
-          }
-        });
-        
-        el.addEventListener('mouseleave', () => {
-          this.cursor.classList.remove('cursor--hover', 'cursor--text');
-        });
-      });
+      // Disabled - using default cursor
+      return;
     }
   }
 
@@ -471,33 +424,39 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
-  // Data Bars Animation
+  // Data Bars Animation (Intersection Observer - No GSAP dependency)
   // ============================================
   class DataBars {
     constructor() {
       this.bars = document.querySelectorAll('.data__bar');
       this.chart = document.querySelector('.data__chart');
+      this.animated = false;
     }
 
     init() {
-      if (!this.chart) return;
+      if (!this.chart || this.bars.length === 0) return;
 
-      ScrollTrigger.create({
-        trigger: this.chart,
-        start: 'top 70%',
-        onEnter: () => this.animateBars()
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !this.animated) {
+            this.animated = true;
+            this.animateBars();
+          }
+        });
+      }, { 
+        threshold: 0.3,
+        rootMargin: '0px'
       });
+
+      observer.observe(this.chart);
     }
 
     animateBars() {
       this.bars.forEach((bar, index) => {
         const height = bar.dataset.height;
-        gsap.to(bar, {
-          height: height,
-          duration: 1.5,
-          delay: index * 0.15,
-          ease: 'power3.out'
-        });
+        setTimeout(() => {
+          bar.style.height = height;
+        }, index * 150);
       });
     }
   }

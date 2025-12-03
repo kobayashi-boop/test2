@@ -242,74 +242,19 @@ button {
 }
 
 /* ============================================
-   Custom Cursor
+   Custom Cursor - DISABLED (using default cursor)
 ============================================ */
 .cursor {
-  display: none;
+  display: none !important;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  body {
-    cursor: none;
-  }
-  
-  a, button, [data-cursor] {
-    cursor: none;
-  }
-  
-  .cursor {
-    display: block;
-    position: fixed;
-    pointer-events: none;
-    z-index: 99998;
-    mix-blend-mode: difference;
-  }
-  
-  .cursor__dot {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background: #fff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform 0.15s var(--ease-out-expo);
-  }
-  
-  .cursor__ring {
-    position: fixed;
-    width: 48px;
-    height: 48px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.2s var(--ease-out-expo);
-  }
-  
-  .cursor--hover .cursor__dot {
-    transform: translate(-50%, -50%) scale(0);
-  }
-  
-  .cursor--hover .cursor__ring {
-    transform: translate(-50%, -50%) scale(1.5);
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .cursor--text .cursor__ring {
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.05);
-  }
-  
-  .cursor--text .cursor__ring::after {
-    content: 'View';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: #fff;
-  }
+/* Keep default cursor everywhere */
+body, a, button, [data-cursor] {
+  cursor: auto;
+}
+
+a, button {
+  cursor: pointer;
 }
 
 /* ============================================
@@ -988,6 +933,10 @@ button {
   background: var(--color-border);
   border-radius: var(--radius-sm);
   transition: height 1.5s var(--ease-out-expo);
+}
+
+.data__bar.is-animated {
+  /* Heights set by JS */
 }
 
 .data__bar--highlight {
