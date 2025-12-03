@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  
+  <!-- SEO -->
+  <title>ビジネスマンの口臭対策 | 科学的アプローチで根本解決 | ブレスケアクリニック</title>
+  <meta name="description" content="データで見える化。専門医による科学的な口臭治療。新宿駅1分・完全個室・土日診療。商談・デート前の不安を解消。無料測定実施中。">
+  
+  <!-- OGP -->
+  <meta property="og:title" content="ビジネスマンの口臭対策 | ブレスケアクリニック">
+  <meta property="og:description" content="データで見える化。専門医による科学的な口臭治療。">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading">
+    <div class="loading__spinner"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- Three.js Background -->
+  <div id="canvas-container"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">BREATHCARE</a>
+      <div class="header__cta">
+        <a href="tel:0120-000-000" class="header__btn header__btn--outline">
+          📞 電話予約
+        </a>
+        <a href="#reservation" class="header__btn header__btn--primary">
+          無料測定を予約
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__content">
+      <div class="hero__badge" data-animate="fade-up">
+        <span class="hero__badge-dot"></span>
+        無料口臭測定 実施中
+      </div>
+      
+      <h1 class="hero__title" data-animate="fade-up">
+        商談で、距離を<br>
+        <span class="hero__title-accent">取られていませんか？</span>
+      </h1>
+      
+      <p class="hero__subtitle" data-animate="fade-up">
+        口臭は自分では気づけない。だからこそ、データで可視化する。<br>
+        専門機器による測定と、医師のカウンセリングで根本原因を特定。
+      </p>
+      
+      <div class="hero__cta" data-animate="fade-up">
+        <a href="#reservation" class="btn btn--primary btn--large">
+          無料測定を予約する
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#process" class="btn btn--outline btn--large">
+          検査の流れを見る
+        </a>
+      </div>
+      
+      <div class="hero__stats" data-animate="fade-up">
+        <div class="hero__stat">
+          <div class="hero__stat-value" data-counter="2847">0</div>
+          <div class="hero__stat-label">年間来院者数</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value"><span data-counter="94">0</span>%</div>
+          <div class="hero__stat-label">改善満足度</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value" data-counter="15">0</div>
+          <div class="hero__stat-label">年の実績</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems Section -->
+  <section class="section" id="problems">
+    <div class="container">
+      <header class="section__header" data-animate="fade-up">
+        <span class="section__label">Problem</span>
+        <h2 class="section__title">こんな経験、ありませんか？</h2>
+        <p class="section__desc">口臭は見えない。だからこそ、不安が消えない。</p>
+      </header>
+      
+      <div class="problems__grid">
+        <div class="problem-card" data-animate="fade-up">
+          <svg class="problem-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <h3 class="problem-card__title">商談中の距離感</h3>
+          <p class="problem-card__text">相手が微妙に距離を取る。気のせいか、それとも…</p>
+        </div>
+        
+        <div class="problem-card" data-animate="fade-up">
+          <svg class="problem-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <h3 class="problem-card__title">デート前の不安</h3>
+          <p class="problem-card__text">近づきたいのに、自信が持てない。</p>
+        </div>
+        
+        <div class="problem-card" data-animate="fade-up">
+          <svg class="problem-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8"/>
+            <path d="M12 17v4"/>
+          </svg>
+          <h3 class="problem-card__title">会議での発言</h3>
+          <p class="problem-card__text">意見を言いたいのに、口を開くのが怖い。</p>
+        </div>
+        
+        <div class="problem-card" data-animate="fade-up">
+          <svg class="problem-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          <h3 class="problem-card__title">自分では分からない</h3>
+          <p class="problem-card__text">本当に臭うのか、確かめる術がない。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Section -->
+  <section class="section" id="data">
+    <div class="container">
+      <header class="section__header" data-animate="fade-up">
+        <span class="section__label">Data Driven</span>
+        <h2 class="section__title">データで見える化する</h2>
+        <p class="section__desc">専門機器による測定で、口臭を数値化。</p>
+      </header>
+      
+      <div class="data__content">
+        <div class="data__visual" data-animate="fade-right">
+          <div class="data__chart">
+            <div class="data__bar" data-height="30%" data-value="32">
+              <span class="data__bar-label">10代</span>
+            </div>
+            <div class="data__bar" data-height="65%" data-value="68">
+              <span class="data__bar-label">20代</span>
+            </div>
+            <div class="data__bar data__bar--highlight" data-height="85%" data-value="89">
+              <span class="data__bar-label">30代</span>
+            </div>
+            <div class="data__bar data__bar--highlight" data-height="92%" data-value="96">
+              <span class="data__bar-label">40代</span>
+            </div>
+            <div class="data__bar" data-height="78%" data-value="82">
+              <span class="data__bar-label">50代</span>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 48px; font-size: 0.875rem; color: var(--color-text-muted);">年代別・口臭に悩んだ経験（%）</p>
+        </div>
+        
+        <div class="data__info" data-animate="fade-left">
+          <h3>30〜40代男性の<br><span class="text-gradient">9割以上</span>が口臭を気にしている</h3>
+          <p>ビジネスの最前線で活躍する世代ほど、口臭への意識が高い。しかし、正しい対処法を知らないまま、市販品で「ごまかす」だけになっていませんか？</p>
+          
+          <ul class="data__list">
+            <li class="data__list-item">
+              <svg class="data__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <span>口臭の原因は複合的。単一のケアでは解決しない</span>
+            </li>
+            <li class="data__list-item">
+              <svg class="data__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <span>自律神経・ストレスも口臭に影響する</span>
+            </li>
+            <li class="data__list-item">
+              <svg class="data__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <span>専門機器なら、原因の特定が可能</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section" id="process">
+    <div class="container">
+      <header class="section__header" data-animate="fade-up">
+        <span class="section__label">Process</span>
+        <h2 class="section__title">無料検査の流れ</h2>
+        <p class="section__desc">所要時間 約60分。完全個室で実施。</p>
+      </header>
+      
+      <div class="process__timeline">
+        <div class="process__item" data-animate="fade-up">
+          <span class="process__num">1</span>
+          <div class="process__content">
+            <h3 class="process__title">ヒアリング</h3>
+            <p class="process__text">完全個室で、いつからどんな場面で気になるかをお聞きします。生活習慣やストレス状況も確認。</p>
+            <span class="process__duration">約15分</span>
+          </div>
+        </div>
+        
+        <div class="process__item" data-animate="fade-up">
+          <span class="process__num">2</span>
+          <div class="process__content">
+            <h3 class="process__title">口臭レベル測定</h3>
+            <p class="process__text">専用機器に息を吹きかけるだけ。口臭の強さと成分を数値で測定します。</p>
+            <span class="process__duration">約10分</span>
+          </div>
+        </div>
+        
+        <div class="process__item" data-animate="fade-up">
+          <span class="process__num">3</span>
+          <div class="process__content">
+            <h3 class="process__title">自律神経チェック</h3>
+            <p class="process__text">指先センサーで自律神経の状態を測定。ストレスと口臭の関係も分析します。</p>
+            <span class="process__duration">約10分</span>
+          </div>
+        </div>
+        
+        <div class="process__item" data-animate="fade-up">
+          <span class="process__num">4</span>
+          <div class="process__content">
+            <h3 class="process__title">結果説明・アドバイス</h3>
+            <p class="process__text">測定結果をグラフで可視化。原因と対策を医師が丁寧に説明します。</p>
+            <span class="process__duration">約25分</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="section">
+    <div class="container">
+      <header class="section__header" data-animate="fade-up">
+        <span class="section__label">Comparison</span>
+        <h2 class="section__title">市販品 vs 専門治療</h2>
+        <p class="section__desc">一時的なごまかしか、根本解決か。</p>
+      </header>
+      
+      <div class="comparison__cards">
+        <div class="comparison__card comparison__card--before" data-animate="fade-right">
+          <span class="comparison__label">市販品でのケア</span>
+          <h3 class="comparison__title">表面的な対処</h3>
+          <ul class="comparison__list">
+            <li class="comparison__list-item">
+              <svg class="comparison__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+              </svg>
+              香りでニオイをマスキングするだけ
+            </li>
+            <li class="comparison__list-item">
+              <svg class="comparison__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+              </svg>
+              効果は一時的（数時間で戻る）
+            </li>
+            <li class="comparison__list-item">
+              <svg class="comparison__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+              </svg>
+              原因が分からないまま
+            </li>
+            <li class="comparison__list-item">
+              <svg class="comparison__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+              </svg>
+              不安は解消されない
+            </li>
+          </ul>
+        </div>
+        
+        <div class="comparison__card comparison__card--after" data-animate="fade-left">
+          <span class="comparison__label">専門治療</span>
+          <h3 class="comparison__title">根本からの解決</h3>
+          <ul class="comparison__list">
+            <li class="comparison__list-item">
+              <svg class="comparison__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              専門機器で原因を特定
+            </li>
+            <li class="comparison__list-item">
+              <svg class="comparison__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              口腔環境の改善
+            </li>
+            <li class="comparison__list-item">
+              <svg class="comparison__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              生活習慣・ストレス対策も指導
+            </li>
+            <li class="comparison__list-item">
+              <svg class="comparison__list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              自信を持って人と向き合える
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <header class="section__header" data-animate="fade-up">
+        <span class="section__label">Why Us</span>
+        <h2 class="section__title">選ばれる理由</h2>
+      </header>
+      
+      <div class="features__grid">
+        <div class="feature-card" data-animate="fade-up">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">日本口臭学会認定医</h3>
+          <p class="feature-card__text">感覚ではなく、データと医学的根拠に基づいた診断を行います。</p>
+        </div>
+        
+        <div class="feature-card" data-animate="fade-up">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="11" width="18" height="11" rx="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">完全個室対応</h3>
+          <p class="feature-card__text">他の患者さんとすれ違うことなく、プライバシーを完全に保護。</p>
+        </div>
+        
+        <div class="feature-card" data-animate="fade-up">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">土日診療・夜20時まで</h3>
+          <p class="feature-card__text">仕事終わりや週末でも通いやすい診療体制。</p>
+        </div>
+        
+        <div class="feature-card" data-animate="fade-up">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">新宿駅徒歩1分</h3>
+          <p class="feature-card__text">アクセス抜群。商談の合間にも立ち寄れる好立地。</p>
+        </div>
+        
+        <div class="feature-card" data-animate="fade-up">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">データ可視化</h3>
+          <p class="feature-card__text">測定結果はグラフで表示。改善の経過も数値で実感。</p>
+        </div>
+        
+        <div class="feature-card" data-animate="fade-up">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">無理な勧誘なし</h3>
+          <p class="feature-card__text">無料検査だけでもOK。治療は納得された場合のみ。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <header class="section__header" data-animate="fade-up">
+        <span class="section__label">Pricing</span>
+        <h2 class="section__title">料金プラン</h2>
+        <p class="section__desc">まずは無料測定で現状を確認。</p>
+      </header>
+      
+      <div class="pricing__grid">
+        <div class="pricing-card" data-animate="fade-up">
+          <h3 class="pricing-card__name">無料測定</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-value">¥0</span>
+          </div>
+          <p class="pricing-card__desc">口臭測定・自律神経測定・カウンセリング</p>
+          <a href="#reservation" class="btn btn--outline pricing-card__btn">予約する</a>
+        </div>
+        
+        <div class="pricing-card pricing-card--featured" data-animate="fade-up">
+          <h3 class="pricing-card__name">スタンダード</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-value">¥121,000</span>
+            <span class="pricing-card__price-unit">（税込）</span>
+          </div>
+          <p class="pricing-card__desc">精密検査 + 口腔内ケア + 生活習慣指導</p>
+          <a href="#reservation" class="btn btn--primary pricing-card__btn">予約する</a>
+        </div>
+        
+        <div class="pricing-card" data-animate="fade-up">
+          <h3 class="pricing-card__name">マスター</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-value">¥242,000〜</span>
+            <span class="pricing-card__price-unit">（税込）</span>
+          </div>
+          <p class="pricing-card__desc">フルコース + 体質改善 + 定期検診</p>
+          <a href="#reservation" class="btn btn--outline pricing-card__btn">予約する</a>
+        </div>
+      </div>
+      
+      <p style="text-align: center; margin-top: var(--space-2xl); font-size: 0.875rem; color: var(--color-text-muted);">
+        ※自由診療のため保険適用外 ｜ クレジットカード・36回払い可（金利当院負担）
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <header class="section__header" data-animate="fade-up">
+        <span class="section__label">FAQ</span>
+        <h2 class="section__title">よくある質問</h2>
+      </header>
+      
+      <div class="faq__list">
+        <div class="faq__item is-active" data-animate="fade-up">
+          <button class="faq__question">
+            <span>本当に無料で検査を受けられますか？</span>
+            <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq__answer">
+            <p class="faq__answer-content">はい。初回の口臭測定・自律神経測定・カウンセリングは完全無料です。その場で治療を契約する必要もありません。</p>
+          </div>
+        </div>
+        
+        <div class="faq__item" data-animate="fade-up">
+          <button class="faq__question">
+            <span>自分に口臭があるか分からないのですが…</span>
+            <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq__answer">
+            <p class="faq__answer-content">そういった方こそ、ぜひ無料測定を。専門機器で客観的に数値化するので、「気のせい」なのか「実際にあるのか」がはっきり分かります。</p>
+          </div>
+        </div>
+        
+        <div class="faq__item" data-animate="fade-up">
+          <button class="faq__question">
+            <span>仕事が忙しくて通えるか不安です</span>
+            <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq__answer">
+            <p class="faq__answer-content">平日は夜20時まで、土日祝も診療しています。新宿駅から徒歩1分なので、仕事終わりや休日にも無理なく通院いただけます。</p>
+          </div>
+        </div>
+        
+        <div class="faq__item" data-animate="fade-up">
+          <button class="faq__question">
+            <span>どのくらいで効果を実感できますか？</span>
+            <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq__answer">
+            <p class="faq__answer-content">原因や症状によりますが、多くの方が1〜3ヶ月で改善を実感されています。定期的な測定で、数値の変化を確認しながら治療を進めます。</p>
+          </div>
+        </div>
+        
+        <div class="faq__item" data-animate="fade-up">
+          <button class="faq__question">
+            <span>保険は使えますか？</span>
+            <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq__answer">
+            <p class="faq__answer-content">口臭治療は自由診療のため、健康保険は適用されません。ただし、クレジットカードや医療ローン（36回まで金利無料）がご利用いただけます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta" id="reservation">
+    <div class="container">
+      <div class="cta__content" data-animate="fade-up">
+        <h2 class="cta__title">まずは、数値で現状を知る</h2>
+        <p class="cta__text">
+          自分では分からない口臭。だからこそ、専門機器で可視化する。<br>
+          無料測定で、今の状態を把握しませんか？
+        </p>
+        <div class="cta__buttons">
+          <a href="tel:0120-000-000" class="btn btn--outline btn--large">
+            📞 0120-000-000
+          </a>
+          <a href="#" class="btn btn--primary btn--large">
+            WEB予約はこちら
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        <p class="cta__note">30秒で予約完了 ｜ 無理な勧誘は一切ありません</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <div class="footer__logo">BREATHCARE</div>
+          <p class="footer__desc">専門医による科学的な口臭治療。データで見える化し、根本から解決します。</p>
+        </div>
+        
+        <div class="footer__nav">
+          <h4 class="footer__nav-title">Menu</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#problems" class="footer__nav-link">こんな悩みに</a></li>
+            <li><a href="#process" class="footer__nav-link">検査の流れ</a></li>
+            <li><a href="#features" class="footer__nav-link">選ばれる理由</a></li>
+            <li><a href="#pricing" class="footer__nav-link">料金</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__nav">
+          <h4 class="footer__nav-title">Info</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#" class="footer__nav-link">アクセス</a></li>
+            <li><a href="#faq" class="footer__nav-link">よくある質問</a></li>
+            <li><a href="#" class="footer__nav-link">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 BREATHCARE CLINIC. All rights reserved.</p>
+        <p style="font-size: 0.75rem; color: var(--color-text-muted);">東京都新宿区新宿3-1-1 サンプルビル5F</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./script.js"></script>
+</body>
+</html>
